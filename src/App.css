@@ -1,0 +1,19 @@
+/* Global styles for the application */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Ensure main content has proper spacing */
+main {
+  padding: 1rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+  }
+}
