@@ -23,28 +23,28 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="text-[#8943af] hover:bg-[#8f5cab] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Home
               </Link>
               <Link
-                to="/about"
-                className="text-[#8943af] hover:bg-[#8c5ba7] px-3 py-2 rounded-md text-sm font-medium"
+                to="/"
+                className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 About
               </Link>
               <Link
-                to="/blog"
-                className="text-[#8943af] hover:bg-[#9f55c8] px-3 py-2 rounded-md text-sm font-medium"
+                to="/"
+                className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Blog
               </Link>
               <Link
-                to="/contact"
-                className="text-[#8943af] hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                to="/"
+                className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Contact Us
