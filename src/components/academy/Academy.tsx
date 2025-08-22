@@ -1,5 +1,3 @@
-import React from "react";
-
 const Academy = () => {
   // Array of Cloudinary image URLs
   const academyImages = [
