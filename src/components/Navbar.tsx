@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#897191] text-white shadow-md">
+    <nav className="bg-[#fefcff] shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -19,37 +19,39 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="text-white hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-[#8943af] hover:bg-[#8f5cab] px-3 py-2 rounded-md text-sm font-medium"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="text-white hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-[#8943af] hover:bg-[#8c5ba7] px-3 py-2 rounded-md text-sm font-medium"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 About
               </Link>
               <Link
                 to="/blog"
-                className="text-white hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-[#8943af] hover:bg-[#9f55c8] px-3 py-2 rounded-md text-sm font-medium"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Blog
               </Link>
               <Link
                 to="/contact"
-                className="text-white hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-[#8943af] hover:bg-[#7a6585] px-3 py-2 rounded-md text-sm font-medium"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
               >
                 Contact Us
               </Link>
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
@@ -99,6 +101,7 @@ const Navbar = () => {
           <Link
             to="/"
             className="text-white hover:bg-[#7a6585] block px-3 py-2 rounded-md text-base font-medium"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
             onClick={() => setIsMenuOpen(false)}
           >
             Home
@@ -106,6 +109,7 @@ const Navbar = () => {
           <Link
             to="/about"
             className="text-white hover:bg-[#7a6585] block px-3 py-2 rounded-md text-base font-medium"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
             onClick={() => setIsMenuOpen(false)}
           >
             About
@@ -113,6 +117,7 @@ const Navbar = () => {
           <Link
             to="/blog"
             className="text-white hover:bg-[#7a6585] block px-3 py-2 rounded-md text-base font-medium"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
             onClick={() => setIsMenuOpen(false)}
           >
             Blog
@@ -120,6 +125,7 @@ const Navbar = () => {
           <Link
             to="/contact"
             className="text-white hover:bg-[#7a6585] block px-3 py-2 rounded-md text-base font-medium"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us

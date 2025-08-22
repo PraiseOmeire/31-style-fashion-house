@@ -6,14 +6,42 @@ body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-/* Ensure main content has proper spacing */
-main {
-  padding: 1rem;
+/* Full screen header styles */
+.full-screen-header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  main {
-    padding: 0.5rem;
+.header-text {
+  text-align: center;
+  z-index: 2;
+}
+
+/* Ensure the navbar doesn't overlap with the header */
+.navbar {
+  z-index: 10;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #ec4899, #fbbf24, #3b82f6, #10b981);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
 }

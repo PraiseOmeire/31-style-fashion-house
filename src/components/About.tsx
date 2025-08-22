@@ -1,19 +1,31 @@
 const About = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">About Us</h1>
-      <p className="text-lg mb-4">
-        Welcome to 31 Style, your premier destination for fashion and lifestyle
-        content.
-      </p>
-      <p className="text-lg mb-4">
-        We are dedicated to bringing you the latest trends, style tips, and
-        inspiration to help you express your unique personality through fashion.
-      </p>
-      <p className="text-lg">
-        Our team of passionate fashion enthusiasts curates content that
-        celebrates individuality and creativity in style.
-      </p>
+    <div className="py-56">
+      <div className="flex justify-center">
+        <h1
+          className="text-5xl font-bold mb-6"
+          style={{fontFamily: "'Mozilla Headline',  sans-serif"}}
+        >
+          Welcome to 31 Style Fashion House
+        </h1>
+      </div>
+      <div className="flex justify-center py-8">
+        <div className="w-[90%]">
+          <p className="text-lg text-center leading-loose">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+            semper nisi. Aenean Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+            sociis natoque penatibus et magnis dis parturient montes, nascetur
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
