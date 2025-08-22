@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
-// import Categories from "./categories/Categories";
-// import Academy from "./academy/Academy";
+import {useState, useEffect} from "react";
+
 import About from "./About";
 
 const Home = () => {
