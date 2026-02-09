@@ -5,6 +5,7 @@ import Home from "./components/Home";
 // import Blog from "./components/Blog";
 // import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import AcademyPage from "./components/AcademyPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/academy" element={<AcademyPage />} />
             {/* <Route path="/" element={<About />} />
             <Route path="/" element={<Blog />} />
             <Route path="/" element={<Contact />} /> */}

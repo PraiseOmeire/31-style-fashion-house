@@ -1,9 +1,10 @@
 import {FaWhatsapp, FaPhone, FaEnvelope, FaInstagram} from "react-icons/fa";
 
 const ContactCTA = () => {
-  const whatsappNumber = "+234XXXXXXXXXX"; // Replace with actual number
+  const whatsappNumber = "+2348139183140";
+
   const whatsappMessage = encodeURIComponent(
-    "Hello! I'm interested in learning more about 31 Styles Fashion House and would like to place an order."
+    "Hello! I'm interested in learning more about 31 Styles Fashion House and would like to place an order.",
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 

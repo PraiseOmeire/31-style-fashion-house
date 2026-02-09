@@ -36,6 +36,13 @@ const Navbar = () => {
                 About
               </Link>
               <Link
+                to="/academy"
+                className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+              >
+                Academy
+              </Link>
+              <Link
                 to="/"
                 className="text-grey-900 hover:bg-[#bc8cd5] px-3 py-2 rounded-md text-sm font-medium"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
@@ -113,6 +120,14 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             About
+          </Link>
+          <Link
+            to="/academy"
+            className="text-white hover:bg-[#7a6585] block px-3 py-2 rounded-md text-base font-medium"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Academy
           </Link>
           <Link
             to="/blog"

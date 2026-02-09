@@ -99,3 +99,43 @@ body {
 .animate-subtle-pulse {
   animation: subtlePulse 4s ease-in-out infinite;
 }
+
+/* Hero entrance animation - fade up from below */
+@keyframes fadeRise {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fadeRise 1s ease-out forwards;
+}
+
+/* Combined fade-rise + gradient animation for hero headline */
+.animate-fade-rise-gradient {
+  background: linear-gradient(-45deg, #ec4899, #fbbf24, #3b82f6, #10b981);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeRise 1s ease-out forwards, gradientShift 8s ease infinite;
+}
+
+.animate-fade-rise-delay-1 {
+  animation: fadeRise 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fadeRise 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-fade-rise-delay-3 {
+  animation: fadeRise 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
