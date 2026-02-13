@@ -1,4 +1,5 @@
 import {FaWhatsapp, FaPhone, FaEnvelope, FaInstagram} from "react-icons/fa";
+import { ScrollAnimated } from '../ScrollAnimated';
 
 const ContactCTA = () => {
   const whatsappNumber = "+2348139183140";
@@ -11,32 +12,36 @@ const ContactCTA = () => {
   return (
     <section className="py-16 md:py-24 px-4 md:px-16 bg-gradient-to-br from-[#bc8cd5] to-[#897191]">
       <div className="max-w-4xl mx-auto text-center">
-        <h2
-          className="text-4xl md:text-6xl font-bold text-white mb-6"
-          style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-        >
-          Ready to Transform Your Style?
-        </h2>
+        <ScrollAnimated animation="scale" duration="slow">
+          <h2
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+          >
+            Ready to Transform Your Style?
+          </h2>
 
-        <p
-          className="text-xl md:text-2xl text-white/90 mb-12"
-          style={{fontFamily: "'Roboto Condensed', sans-serif"}}
-        >
-          Get in touch with us today to discuss your custom fashion needs and
-          place your order
-        </p>
+          <p
+            className="text-xl md:text-2xl text-white/90 mb-12"
+            style={{fontFamily: "'Roboto Condensed', sans-serif"}}
+          >
+            Get in touch with us today to discuss your custom fashion needs and
+            place your order
+          </p>
+        </ScrollAnimated>
 
         {/* WhatsApp Button */}
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-4 bg-white text-[#bc8cd5] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#fefcff] hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-          style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-        >
-          <FaWhatsapp className="text-3xl" />
-          <span>Message Us on WhatsApp</span>
-        </a>
+        <ScrollAnimated animation="fade-up" delay={200}>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-white text-[#bc8cd5] px-8 py-4 rounded-full text-xl font-bold hover:bg-[#fefcff] hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+          >
+            <FaWhatsapp className="text-3xl" />
+            <span>Message Us on WhatsApp</span>
+          </a>
+        </ScrollAnimated>
 
         {/* Alternative Contact Methods */}
         <div

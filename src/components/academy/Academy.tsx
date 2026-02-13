@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import { ScrollAnimated } from '../ScrollAnimated';
 
 const Academy = () => {
   const academyImages = [
@@ -21,12 +22,14 @@ const Academy = () => {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left - Text Content */}
           <div className="text-white order-2 md:order-1">
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
-              style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-            >
-              Training the Next Generation of Designers.
-            </h2>
+            <ScrollAnimated animation="fade-down">
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+              >
+                Training the Next Generation of Designers.
+              </h2>
+            </ScrollAnimated>
             <div className="w-20 h-1 bg-[#bc8cd5] rounded-full mb-8" />
 
             {/* Body Text - 3 separate paragraphs */}
@@ -93,37 +96,45 @@ const Academy = () => {
             <div className="grid grid-cols-2 gap-4">
               {/* Left column */}
               <div className="space-y-4">
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={academyImages[0]}
-                    alt="Academy training session"
-                    className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={academyImages[2]}
-                    alt="Fashion design workshop"
-                    className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
+                <ScrollAnimated animation="zoom" delay={0}>
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={academyImages[0]}
+                      alt="Academy training session"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                </ScrollAnimated>
+                <ScrollAnimated animation="zoom" delay={200}>
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={academyImages[2]}
+                      alt="Fashion design workshop"
+                      className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                </ScrollAnimated>
               </div>
               {/* Right column - offset */}
               <div className="space-y-4 pt-8">
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={academyImages[1]}
-                    alt="Sewing techniques class"
-                    className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={academyImages[3]}
-                    alt="Students at work"
-                    className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
+                <ScrollAnimated animation="zoom" delay={100}>
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={academyImages[1]}
+                      alt="Sewing techniques class"
+                      className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                </ScrollAnimated>
+                <ScrollAnimated animation="zoom" delay={300}>
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={academyImages[3]}
+                      alt="Students at work"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                </ScrollAnimated>
               </div>
             </div>
             {/* Image Caption */}

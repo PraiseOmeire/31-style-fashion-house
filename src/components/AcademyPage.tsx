@@ -1,4 +1,5 @@
 import Footer from "./footer/Footer";
+import { ScrollAnimated } from './ScrollAnimated';
 
 interface ProgramModule {
   title: string;
@@ -52,14 +53,17 @@ const AcademyPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div>
-              <div className="w-20 h-1 bg-[#bc8cd5] rounded-full mb-6"></div>
-              <h1
-                className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
-                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-              >
-                Building Designers Through Craftsmanship & Vision.
-              </h1>
-              <p
+              <ScrollAnimated animation="fade-down">
+                <div className="w-20 h-1 bg-[#bc8cd5] rounded-full mb-6"></div>
+              </ScrollAnimated>
+              <ScrollAnimated animation="fade-up" delay={100}>
+                <h1
+                  className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
+                  style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+                >
+                  Building Designers Through Craftsmanship & Vision.
+                </h1>
+                <p
                 className="text-lg text-gray-700 leading-relaxed"
                 style={{fontFamily: "'Roboto Condensed', sans-serif"}}
               >
@@ -70,7 +74,8 @@ const AcademyPage = () => {
                 studio environment where every stitch, pattern, and fabric
                 choice brings you closer to becoming the designer you aspire to
                 be.
-              </p>
+                </p>
+              </ScrollAnimated>
             </div>
 
             {/* Images */}
@@ -102,10 +107,12 @@ const AcademyPage = () => {
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {modules.map((module, index) => (
-              <div
+              <ScrollAnimated
                 key={index}
-                className="bg-white rounded-lg shadow-sm p-6 md:p-8"
+                animation="scale"
+                delay={index * 100}
               >
+                <div className="bg-white rounded-lg shadow-sm p-6 md:p-8">
                 <h3
                   className="text-xl font-bold mb-3 text-[#bc8cd5]"
                   style={{fontFamily: "'Mozilla Headline', sans-serif"}}
@@ -118,7 +125,8 @@ const AcademyPage = () => {
                 >
                   {module.outcome}
                 </p>
-              </div>
+                </div>
+              </ScrollAnimated>
             ))}
           </div>
         </div>
@@ -136,7 +144,12 @@ const AcademyPage = () => {
 
           <div className="space-y-4">
             {learningFormat.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
+              <ScrollAnimated
+                key={index}
+                animation="fade-left"
+                delay={index * 50}
+              >
+                <div className="flex items-start gap-3">
                 {/* Purple bullet dot */}
                 <div className="w-2 h-2 bg-[#bc8cd5] rounded-full mt-2 flex-shrink-0"></div>
                 <p
@@ -145,7 +158,8 @@ const AcademyPage = () => {
                 >
                   {item}
                 </p>
-              </div>
+                </div>
+              </ScrollAnimated>
             ))}
           </div>
         </div>
@@ -154,25 +168,27 @@ const AcademyPage = () => {
       {/* Section 4: Call to Action */}
       <section className="py-16 md:py-24 px-4 md:px-16 bg-gradient-to-br from-[#bc8cd5] to-[#897191]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2
-            className="text-2xl md:text-3xl font-bold text-white mb-4"
-            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-          >
-            Ready to Start Your Journey?
-          </h2>
-          <p
-            className="text-lg text-white/90 mb-8"
-            style={{fontFamily: "'Roboto Condensed', sans-serif"}}
-          >
-            Learn more about enrollment and upcoming programs.
-          </p>
-          <a
-            href="mailto:omeirepraise99@gmail.com"
-            className="inline-flex items-center gap-2 bg-white text-[#bc8cd5] px-8 py-4 rounded-lg text-lg font-bold hover:bg-[#fefcff] hover:shadow-xl transition-all duration-300"
-            style={{fontFamily: "'Roboto Condensed', sans-serif"}}
-          >
-            Request Program Information
-          </a>
+          <ScrollAnimated animation="zoom">
+            <h2
+              className="text-2xl md:text-3xl font-bold text-white mb-4"
+              style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+            >
+              Ready to Start Your Journey?
+            </h2>
+            <p
+              className="text-lg text-white/90 mb-8"
+              style={{fontFamily: "'Roboto Condensed', sans-serif"}}
+            >
+              Learn more about enrollment and upcoming programs.
+            </p>
+            <a
+              href="mailto:omeirepraise99@gmail.com"
+              className="inline-flex items-center gap-2 bg-white text-[#bc8cd5] px-8 py-4 rounded-lg text-lg font-bold hover:bg-[#fefcff] hover:shadow-xl transition-all duration-300"
+              style={{fontFamily: "'Roboto Condensed', sans-serif"}}
+            >
+              Request Program Information
+            </a>
+          </ScrollAnimated>
         </div>
       </section>
 

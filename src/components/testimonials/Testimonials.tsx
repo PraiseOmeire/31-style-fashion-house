@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import TestimonialCard from "./TestimonialCard";
+import { ScrollAnimated } from '../ScrollAnimated';
 
 const PLACEHOLDER_TESTIMONIALS = [
   {
@@ -54,12 +55,14 @@ const Testimonials = () => {
   return (
     <section className="py-16 md:py-24 px-4 md:px-16 bg-[#fefcff]">
       <div className="max-w-4xl mx-auto">
-        <h2
-          className="text-4xl md:text-6xl font-bold text-center mb-12"
-          style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-        >
-          What Our Clients Say
-        </h2>
+        <ScrollAnimated animation="fade-up">
+          <h2
+            className="text-4xl md:text-6xl font-bold text-center mb-12"
+            style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+          >
+            What Our Clients Say
+          </h2>
+        </ScrollAnimated>
 
         <div
           className="relative"
