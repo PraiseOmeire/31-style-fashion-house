@@ -1,4 +1,5 @@
 import {FaInstagram, FaLinkedin} from "react-icons/fa";
+import { ScrollAnimated } from '../ScrollAnimated';
 
 const CreativeDirector = () => {
   return (
@@ -6,17 +7,20 @@ const CreativeDirector = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image Section */}
-          <div className="relative rounded-lg overflow-hidden shadow-2xl">
-            <img
-              src="https://res.cloudinary.com/dzfcy2b1x/image/upload/v1770214712/Creative-D.jpg"
-              alt="Mercy C. David-Eze — Founder & Creative Director"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          <ScrollAnimated animation="fade-left" duration="slow">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src="https://res.cloudinary.com/dzfcy2b1x/image/upload/v1770214712/Creative-D.jpg"
+                alt="Mercy C. David-Eze — Founder & Creative Director"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </ScrollAnimated>
 
           {/* Bio Section */}
-          <div className="space-y-6">
-            <div>
+          <ScrollAnimated animation="fade-right" delay={100}>
+            <div className="space-y-6">
+              <div>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-2"
                 style={{fontFamily: "'Mozilla Headline', sans-serif"}}
@@ -91,7 +95,8 @@ const CreativeDirector = () => {
                 <FaLinkedin className="text-3xl" />
               </a>
             </div>
-          </div>
+            </div>
+          </ScrollAnimated>
         </div>
       </div>
     </section>

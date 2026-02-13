@@ -1,5 +1,6 @@
 import {useState} from "react";
 import BespokeFlow from "../bespoke-flow/BespokeFlow";
+import { ScrollAnimated } from '../ScrollAnimated';
 
 const Categories = () => {
   const [showBespokeFlow, setShowBespokeFlow] = useState(false);
@@ -32,13 +33,17 @@ const Categories = () => {
     <section id="categories" className="pt-4 md:pt-8 pb-20 md:pb-32 px-4 md:px-16 bg-[#fefcff]">
       <div className="max-w-7xl mx-auto">
         {categories.map((category, index) => (
-          <div
+          <ScrollAnimated
             key={index}
-            id={category.label === "BESPOKE & CUSTOM" ? "bespoke" : undefined}
-            className={`flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-24 md:mb-32 last:mb-0 ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
+            animation="scale"
+            delay={index * 100}
           >
+            <div
+              id={category.label === "BESPOKE & CUSTOM" ? "bespoke" : undefined}
+              className={`flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-24 md:mb-32 last:mb-0 ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
+            >
             {/* Image */}
             <div className="w-full md:w-1/2">
               <img
@@ -100,7 +105,8 @@ const Categories = () => {
                 )}
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollAnimated>
         ))}
       </div>
 

@@ -1,3 +1,5 @@
+import { ScrollAnimated } from '../ScrollAnimated';
+
 const Welcome = () => {
   return (
     <section className="pt-20 md:pt-28 pb-2 md:pb-4 px-4 md:px-16 bg-[#fefcff]">
@@ -5,12 +7,14 @@ const Welcome = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Column - Text */}
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6 uppercase tracking-normal"
-              style={{fontFamily: "'Mozilla Headline', sans-serif"}}
-            >
-              Why 31 Styles?
-            </h2>
+            <ScrollAnimated animation="fade-down" duration="normal">
+              <h2
+                className="text-2xl md:text-3xl font-bold mb-6 uppercase tracking-normal"
+                style={{fontFamily: "'Mozilla Headline', sans-serif"}}
+              >
+                Why 31 Styles?
+              </h2>
+            </ScrollAnimated>
             <p
               className="text-lg md:text-xl text-gray-700 leading-relaxed"
               style={{fontFamily: "'Roboto Condensed', sans-serif"}}
